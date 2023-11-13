@@ -1,0 +1,227 @@
+.whole-container {
+    height: 100%;
+    background-color: #ffc697;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 6s ease infinite;
+      -moz-animation: gradbar 6s ease infinite;
+      animation: gradbar 6s ease infinite;
+}
+
+.tracking-container {
+    height: 15%;
+}
+
+.tracking-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.track-input{
+    height: 50px;
+    width: 40%;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: solid white 3px;
+    border-radius: 4px;
+}
+
+
+
+.tracking-button {
+    padding: 10px 20px;
+    background-color: #EE7752;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+
+    background: linear-gradient(-45deg, #FF9B50, #E25E3E, #C63D2F);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 15s ease infinite;
+    -moz-animation: gradbar 15s ease infinite;
+    animation: gradbar 15s ease infinite;
+
+}
+
+.tracking-button:hover {
+    transition: color 0.3s ease-out;
+    color: #EE7752;
+    border:1px solid #EE7752;
+
+    background: linear-gradient(-45deg, #F1C27B, #FFD89C, #F4DFB6);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 15s ease infinite;
+    -moz-animation: gradbar 15s ease infinite;
+    animation: gradbar 15s ease infinite;
+}
+
+.tracked-items-container {
+    background-color: #EE7752;
+    height: 65%;
+    border-top-left-radius: 90% 30%;
+    border-top-right-radius: 40% 20%;
+}
+
+.tracked-items-empty-space {
+    height: 10%;
+}
+
+.tracked-items{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    height: 100px;
+    width: 50%;
+    background-color: #e6a57e;
+    margin: 10px;
+    border-radius: 5px;
+
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(-45deg, #FAAB78, #df965a);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 6s ease infinite;
+      -moz-animation: gradbar 6s ease infinite;
+      animation: gradbar 6s ease infinite;
+}
+
+.item:hover {
+    transition: color 0.3s ease-out;
+    color: #EE7752;
+    border:2px solid #EE7752;
+    background: #E25E3E;
+
+    cursor: pointer;
+}
+
+.item-tracking-number {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 20px;
+    color: #fff4df;
+    font-size: 25px;
+}
+
+.item-truck {
+    height: 100%;
+    color: #F4DFB6;
+}
+
+.item-trash {
+    height: 80%;
+    color: #F4DFB6;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #cc7834;
+    cursor: pointer;
+}
+
+.item-trash:hover {
+    height: 80%;
+    color: #cc7834;
+    border: 2px solid #cc7834;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #F4DFB6;
+}
+
+.item-history {
+    margin: 20px;
+    color: #fff4df;
+    font-size: 25px;
+    display: flex;
+    width: 50%;
+    
+}
+
+.item-history-container {
+    margin-right: 10px;
+}
+
+.tracked-items:first-child {
+    align-self: start; /* Aligns the first child to the start */
+}
+
+@media only screen and (max-width: 900px) { 
+    
+    /* MOBILE NAVIGATION */
+    .track-input {
+        width: 70%;
+    }
+    .item {
+        width: 70%;
+    }
+
+    .tracked-items{
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 720px) { 
+    
+    /* MOBILE NAVIGATION */
+       
+    .tracking-input-container {
+      display: flex;
+      justify-content: start;
+      margin: 20px;
+    }
+
+    .track-input {
+        width: 80%;
+    }
+
+    .item{
+        width: 80%;
+    }
+    
+    .tracked-items{
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 720px) { 
+    
+    /* MOBILE NAVIGATION */
+       
+    .tracking-input-container {
+      display: flex;
+      justify-content: start;
+      margin: 20px;
+    }
+
+    .track-input {
+        width: 90%;
+    }
+
+    .item{
+        width: 90%;
+    }
+
+    .tracked-items{
+        margin: 10px;
+    }
+    
+
+}
