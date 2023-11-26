@@ -1,0 +1,420 @@
+.whole-container {
+    height: 100%;
+    background-color: #ffc697;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 6s ease infinite;
+    -moz-animation: gradbar 6s ease infinite;
+    animation: gradbar 6s ease infinite;
+}
+
+.space {
+    height: 70px;
+}
+
+.quote {
+    background-color: #ee7652;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.quote .div-2 {
+    /*background-color: #ee7652;*/
+    /*height: 1080px;*/
+    /*position: relative;*/
+    /*width: 1920px;*/
+    background-color: #EE7752;
+    height: 1080px;
+    width: 1920px;
+    position: relative;
+    border-top-left-radius: 90% 30%;
+    border-top-right-radius: 40% 20%;
+}
+
+.quote .overlap {
+    height: 1080px;
+    left: 0;
+    position: absolute;
+    top: 96px;
+    width: 1920px;
+}
+
+.quote .background-color {
+    height: 849px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 1920px !important;
+}
+
+.quote .package-info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 730px;
+    left: 54px;
+    position: absolute;
+    top: 64px;
+    width: 1071px;
+}
+
+.quote .addresses {
+    height: 100px;
+    left: 39px;
+    position: absolute;
+    top: 37px;
+    width: 1002px;
+}
+
+.quote .text-wrapper-7 {
+    color: #000000;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 112px;
+}
+
+.quote .sender {
+    height: 69px;
+    left: 0;
+    position: absolute;
+    top: 31px;
+    width: 482px;
+}
+
+.quote .overlap-group {
+    background-color: #f4f0f0;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 10px;
+    height: 69px;
+    position: relative;
+    width: 480px;
+}
+
+.quote .text-wrapper-8 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 110px;
+}
+
+.quote .receiver {
+    height: 69px;
+    left: 520px;
+    position: absolute;
+    top: 31px;
+    width: 482px;
+}
+
+.quote .text-wrapper-9 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 110px;
+}
+
+.quote .dimensions {
+    height: 101px;
+    left: 39px;
+    position: absolute;
+    top: 175px;
+    width: 1002px;
+}
+
+.quote .text-wrapper-10 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 157px;
+}
+
+.quote .weight {
+    height: 69px;
+    left: 0;
+    position: absolute;
+    top: 31px;
+    width: 230px;
+}
+
+.quote .div-wrapper {
+    background-color: #f4f0f0;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 10px;
+    height: 69px;
+    position: relative;
+    width: 228px;
+}
+
+.quote .text-wrapper-11 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 27px;
+    width: 110px;
+}
+
+.quote .length {
+    height: 69px;
+    left: 252px;
+    position: absolute;
+    top: 31px;
+    width: 230px;
+}
+
+.quote .text-wrapper-12 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 27px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 27px;
+    width: 110px;
+}
+
+.quote .width {
+    height: 69px;
+    left: 520px;
+    position: absolute;
+    top: 31px;
+    width: 230px;
+}
+
+.quote .text-wrapper-13 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 27px;
+    width: 110px;
+}
+
+.quote .height {
+    height: 69px;
+    left: 772px;
+    position: absolute;
+    top: 31px;
+    width: 230px;
+}
+
+.quote .text-wrapper-14 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 27px;
+    width: 110px;
+}
+
+.quote .submit-button {
+    height: 40px;
+    left: 36px;
+    position: absolute;
+    top: 650px;
+    width: 128px;
+}
+
+.quote .overlap-2 {
+    background-color: #f4f4f4;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 100px;
+    height: 40px;
+    position: relative;
+    width: 126px;
+}
+
+.quote .text-wrapper-15 {
+    color: #d2c6c6;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    width: 103px;
+}
+
+.quote .special-requests {
+    height: 307px;
+    left: 39px;
+    position: absolute;
+    top: 313px;
+    width: 1002px;
+}
+
+.quote .request {
+    height: 280px;
+    left: 0;
+    position: absolute;
+    top: 27px;
+    width: 1002px;
+}
+
+.quote .overlap-group-2 {
+    background-color: #f4f0f0;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 10px;
+    height: 280px;
+    position: relative;
+    width: 1000px;
+}
+
+.quote .text-wrapper-16 {
+    color: #848080;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 19px;
+    width: 110px;
+}
+
+.quote .quote-options {
+    height: 695px;
+    left: 1168px;
+    position: absolute;
+    top: 84px;
+    width: 692px;
+}
+
+.quote .overlap-group-wrapper {
+    height: 340px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 694px;
+}
+
+.quote .overlap-group-3 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 340px;
+    position: relative;
+    width: 692px;
+}
+
+.quote .text-wrapper-17 {
+    color: #000000;
+    font-family: "Inter-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    left: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 30px;
+    width: 230px;
+}
+
+.quote .overlap-wrapper {
+    height: 340px;
+    left: 0;
+    position: absolute;
+    top: 355px;
+    width: 694px;
+}
+
+.quote .submit-button {
+    height: 200px;
+    left: 36px;
+    position: absolute;
+    top: 650px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.quote .overlap-2 {
+    background-color: #f4f4f4;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 100px;
+    height: 40px;
+    position: relative;
+    width: 126px;
+    transition: width 0.3s ease; /* Add a transition effect for smooth growth */
+}
+
+.quote .text-wrapper-15 {
+    color: #d2c6c6;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    width: 103px;
+    transition: width 0.3s ease; /* Add a transition effect for smooth growth */
+}
+
+/* Animation for the button on hover */
+.quote .submit-button:hover .overlap-2 {
+    width: 160px; /* Increase the width on hover */
+}
+
+.quote .submit-button:hover .text-wrapper-15 {
+    width: 137px; /* Increase the width on hover */
+}
