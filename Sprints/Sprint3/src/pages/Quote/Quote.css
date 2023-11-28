@@ -1,5 +1,24 @@
-.whole-container {
+
+
+/*.whole-container {
     height: 100%;
+    background-color: #ffc697;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 6s ease infinite;
+    -moz-animation: gradbar 6s ease infinite;
+    animation: gradbar 6s ease infinite;
+}*/
+
+.space {
+    height: 70px;
+}
+
+.quote {
+    height: auto;
     background-color: #ffc697;
     display: flex;
     flex-direction: column;
@@ -11,18 +30,6 @@
     animation: gradbar 6s ease infinite;
 }
 
-.space {
-    height: 70px;
-}
-
-.quote {
-    background-color: #ee7652;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
 .quote .div-2 {
     /*background-color: #ee7652;*/
     /*height: 1080px;*/
@@ -30,7 +37,7 @@
     /*width: 1920px;*/
     background-color: #EE7752;
     height: 1080px;
-    width: 1920px;
+    width: 100%;
     position: relative;
     border-top-left-radius: 90% 30%;
     border-top-right-radius: 40% 20%;
@@ -41,7 +48,7 @@
     left: 0;
     position: absolute;
     top: 96px;
-    width: 1920px;
+    width: 100%;
 }
 
 .quote .background-color {
@@ -331,10 +338,10 @@
 
 .quote .quote-options {
     height: 695px;
-    left: 1168px;
-    position: absolute;
+    left: 70%;
+    position: relative;
     top: 84px;
-    width: 692px;
+    width: 70%;
 }
 
 .quote .overlap-group-wrapper {
@@ -342,7 +349,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    width: 694px;
+    width: 50%;
 }
 
 .quote .overlap-group-3 {
@@ -351,7 +358,7 @@
     box-shadow: 0px 4px 4px #00000040;
     height: 340px;
     position: relative;
-    width: 692px;
+    width: 70%;
 }
 
 .quote .text-wrapper-17 {
@@ -373,7 +380,7 @@
     left: 0;
     position: absolute;
     top: 355px;
-    width: 694px;
+    width: 50%;
 }
 
 .quote .submit-button {
@@ -418,3 +425,4 @@
 .quote .submit-button:hover .text-wrapper-15 {
     width: 137px; /* Increase the width on hover */
 }
+

@@ -1,0 +1,168 @@
+.Review {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 90vh; /* Set the height to the full viewport height for vertical centering */
+    width: 100%; /* Full width to ensure horizontal centering */
+
+ 
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.background-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+  
+  .background-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+  }
+  
+  .background-top {
+      top: 0;
+      height: 100%; /* Covers top half */
+      background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
+      background-size: 400% 400%;
+      -webkit-animation: gradbar 6s ease infinite;
+      -moz-animation: gradbar 6s ease infinite;
+      animation: gradbar 6s ease infinite;
+  }
+  
+  .background-bottom {
+      bottom: 0;
+      background-color: #EE7752;
+      height: 70%;
+      border-top-left-radius: 90% 30%;
+      border-top-right-radius: 40% 20%;
+  }
+
+.Rectangle {
+    width: 80%;
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    grid-gap: 20px; /* Space between columns */
+    margin-bottom: 20px; /* Space below the grid */
+
+
+
+}
+
+.contain-3 {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.name-anon {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.name {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spreads out the label and the input */
+    margin-bottom: 10px; 
+    margin: 10px;
+} 
+
+.rating-review {
+    display: flex;
+    border-radius: 15px;
+    width: 300px;
+    align-items: center;
+    justify-items: stretch;
+}
+
+
+
+.input-check {
+    border-radius: 8px;
+    height: 30px;
+    margin: 10px;
+    width: 30px;
+}
+
+.input {
+    border-radius: 8px;
+    height: 30px;
+    margin: 10px;
+    width: 300px;
+}
+
+.review-title {
+    width: 200px;
+}
+
+.title {
+    display: flex;
+    width: 500px;
+    align-items: center;
+}
+
+.tracking-button {
+    padding: 10px 20px;
+    background-color: #EE7752;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+
+    background: linear-gradient(-45deg, #FF9B50, #E25E3E);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 15s ease infinite;
+    -moz-animation: gradbar 15s ease infinite;
+    animation: gradbar 15s ease infinite;
+
+}
+
+.tracking-button:hover {
+    transition: color 0.3s ease-out;
+    color: #EE7752;
+    border:1px solid #EE7752;
+
+    background: linear-gradient(-45deg, #F1C27B, #FFD89C, #F4DFB6);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 15s ease infinite;
+    -moz-animation: gradbar 15s ease infinite;
+    animation: gradbar 15s ease infinite;
+}
+
+.buttons {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contain-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.c1 {
+    margin-bottom: 60px;
+}
+
+.title-main {
+    color: white;
+}
+
+.comment-box {
+    width: 100%;
+    height: 400px;
+}

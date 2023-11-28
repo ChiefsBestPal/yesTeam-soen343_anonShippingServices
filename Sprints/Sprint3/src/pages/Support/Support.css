@@ -1,0 +1,141 @@
+.Support {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the height to the full viewport height for vertical centering */
+    width: 100%; /* Full width to ensure horizontal centering */
+
+    height: 80%;
+ 
+    display: flex;
+    flex-direction: column;
+}
+
+.Support {
+  position: relative;
+}
+
+.background-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+
+.background-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.background-top {
+    top: 0;
+    height: 100%; /* Covers top half */
+    background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 6s ease infinite;
+    -moz-animation: gradbar 6s ease infinite;
+    animation: gradbar 6s ease infinite;
+}
+
+.background-bottom {
+    bottom: 0;
+    background-color: #EE7752;
+    height: 70%;
+    border-top-left-radius: 90% 30%;
+    border-top-right-radius: 40% 20%;
+}
+
+
+.Rectangle {
+    margin: 20px;
+    background-color: white;
+    width: 60%;
+    height: 40vh;
+    border-radius: 20px;
+    /* Optionally, you can add box-shadow, border-radius, etc., for styling */
+}
+
+.FAQ {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.generel-container {
+    margin: 30px; /* Add some spacing between each container */
+}
+
+.Question {
+    font-weight: bold; /* Make question text bold */
+    font-size: 20px;
+    margin-top: 10px; /* Spacing above the question */
+}
+
+.AI-intro {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.track-input {
+    width: 100%; /* Full width of the parent container */
+    padding: 10px; /* Padding for the input field */
+    margin-top: 10px; /* Spacing above the input field */
+    border: 1px solid #ccc; /* Border for the input */
+    border-radius: 5px; /* Rounded corners for the input */
+}
+
+
+
+.AI {
+    margin: 20px;
+    background-color: white;
+    width: 60%;
+    height: 50vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px; /* Padding inside the container */
+  }
+  
+  .chat-history {
+    overflow-y: auto;
+    max-height: 600px; /* Adjust based on your design */
+    margin-bottom: 10px;
+  }
+
+  .chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .user-message, .bot-message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .user-message {
+    background-color: #FAAB78; /* Light green for user messages */
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+  
+  .bot-message {
+    background-color: #FFDCA9; /* Light grey for bot messages */
+    align-self: flex-start;
+    margin-left: 10px;
+  }
+  
+  /* Input styling */
+  .AI input[type="text"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); /* Adjust input width */
+  }
+  

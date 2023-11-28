@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css'; // Make sure the path is correct
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import companyLogo from './Company logo.png';
 
 const Footer: React.FC = () => {
