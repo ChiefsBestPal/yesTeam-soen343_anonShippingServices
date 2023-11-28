@@ -1,0 +1,109 @@
+.about-us {
+    background-color: #faaf7c;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.space {
+    height: 70px;
+}
+
+.about-us .div-2 {
+    /*background-color: #faaf7c;*/
+    /*height: 1080px;*/
+    /*position: relative;*/
+    /*width: 1920px;*/
+
+    background-color: #EE7752;
+    height: 1080px;
+    width: 1920px;
+    position: relative;
+    border-top-left-radius: 90% 30%;
+    border-top-right-radius: 40% 20%;
+}
+
+.about-us .overlap-group {
+    height: 983px;
+    left: 0;
+    position: absolute;
+    top: 96px;
+    width: 1920px;
+}
+
+.about-us .background-color {
+    height: 888px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 1920px !important;
+}
+
+.about-us .rectangle {
+    background-color: #ffffff;
+    border-radius: 40px;
+    height: 777px;
+    left: 110px;
+    position: absolute;
+    top: 55px;
+    width: 1700px;
+}
+
+.about-us .company-logo-2 {
+    height: 128px;
+    left: 707px;
+    object-fit: cover;
+    position: absolute;
+    top: 562px;
+    width: 505px;
+}
+
+.about-us .flexcontainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 22.46px;
+    height: 735px;
+    left: 191px;
+    position: absolute;
+    top: 75px;
+    width: 1538px;
+}
+
+.about-us .text {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 33.7px;
+    position: relative;
+    text-align: center;
+}
+
+.about-us .span {
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 33.7px;
+}
+
+.about-us .text-wrapper-7 {
+    font-size: 32px;
+}
+
+.about-us .footer-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 887px !important;
+}
+
+.about-us .header-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
