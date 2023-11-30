@@ -1,4 +1,4 @@
-.Review {
+.Review-o {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -13,21 +13,21 @@
     font-weight: 600;
 }
 
-.background-top {
+.background-top-o {
     position: absolute;
     left: 0;
     right: 0;
     z-index: -2;
   }
   
-  .background-bottom {
+  .background-bottom-o {
       position: absolute;
       left: 0;
       right: 0;
       z-index: -1;
   }
   
-  .background-top {
+  .background-top-o {
       top: 0;
       height: 100%; /* Covers top half */
       background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
@@ -37,7 +37,7 @@
       animation: gradbar 6s ease infinite;
   }
   
-  .background-bottom {
+  .background-bottom-o {
       bottom: 0;
       background-color: #EE7752;
       height: 70%;
@@ -45,7 +45,7 @@
       border-top-right-radius: 40% 20%;
   }
 
-.Rectangle {
+.Rectangle-o {
     width: 80%;
     background-color: white;
     margin: 20px;
@@ -56,22 +56,20 @@
     grid-gap: 20px; /* Space between columns */
     margin-bottom: 20px; /* Space below the grid */
 
-
-
 }
 
-.contain-3 {
+.contain-3-o {
     grid-column: 1 / -1;
     width: 100%;
 }
 
-.name-anon {
+.name-anon-o {
     display: flex;
     align-items: center;
     height: 70px;
 }
 
-.name {
+.name-o {
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Spreads out the label and the input */
@@ -79,7 +77,7 @@
     margin: 10px;
 } 
 
-.rating-review {
+.rating-review-o {
     display: flex;
     border-radius: 15px;
     width: 40%;
@@ -89,31 +87,31 @@
 
 
 
-.input-check {
+.input-check-o {
     border-radius: 8px;
     height: 30px;
     margin: 10px;
     width: 30px;
 }
 
-.input {
+.input-o {
     border-radius: 8px;
     height: 30px;
     margin: 10px;
     width: 300px;
 }
 
-.review-title {
+.review-title-o {
     width: 200px;
 }
 
-.title {
+.title-o {
     display: flex;
     width: 500px;
     align-items: center;
 }
 
-.tracking-button {
+.tracking-button-o {
     padding: 10px 20px;
     background-color: #EE7752;
     color: white;
@@ -131,7 +129,7 @@
 
 }
 
-.tracking-button:hover {
+.tracking-button-o:hover {
     transition: color 0.3s ease-out;
     color: #EE7752;
     border:1px solid #EE7752;
@@ -143,31 +141,31 @@
     animation: gradbar 15s ease infinite;
 }
 
-.buttons {
+.buttons-o {
     width: 80%;
     display: flex;
     justify-content: space-between;
 }
 
-.contain-1 {
+.contain-1-o {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.contain-2 {
+.contain-2-o {
     width: 50%;
 }
 
-.c1 {
+.c1-o {
     margin-bottom: 60px;
 }
 
-.title-main {
+.title-main-o {
     color: white;
 }
 
-.comment-box {
+.comment-box-o {
     width: 100%;
     height: 300px;
 }
