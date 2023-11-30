@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route,Navigate} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Header from './pages/Header/Header';
@@ -14,10 +15,23 @@ import Delivery from './pages/Delivery/Delivery';
 
 function App() {
   return (
+
     <div className='app' style={{ height: '100%' }}>
-      <Header></Header>
-      <Delivery></Delivery>
-      <Footer></Footer>
+        <BrowserRouter>
+            <Header></Header>
+            <Routes>
+
+                <Route path='/'  element={<Dashboard />} />
+                <Route path='/aboutus'  element={<AboutUs />} />
+                <Route path='/quote'  element={<Quote />} />
+                <Route path='/tracking'  element={<Tracking />} />
+                <Route path='/delivery'  element={<Delivery />} />
+                <Route path='/support'  element={<Support />} />
+                <Route path='/payment'  element={<Payment />} />
+                <Route path='/review'  element={<Review />} />
+            </Routes>
+            <Footer></Footer>
+        </BrowserRouter>
     </div>
   );
 }

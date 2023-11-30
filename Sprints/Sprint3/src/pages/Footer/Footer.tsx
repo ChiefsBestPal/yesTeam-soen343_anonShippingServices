@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <div className="grad-bar"></div>
             <div className="nav-wrapper">
                 <nav className="navbar">
-                    <a className='nav-item' href="#"><img src={companyLogo} alt="Company Logo" /></a>
+                    <a className='nav-item' href="/"><img src={companyLogo} alt="Company Logo" /></a>
                     <div className="menu-toggle" id="mobile-menu">
                         <span className="bar"></span>
                         <span className="bar"></span>
@@ -21,9 +21,9 @@ const Footer: React.FC = () => {
                     <ul className="nav no-search">
                         <li className="nav-item" style={invisibleStyle}><a href="#">Support</a></li>
                         <li className="nav-item" style={invisibleStyle}><a href="#">About Us</a></li>
-                        <li className="nav-item" style={invisibleStyle}><a href="#">Support</a></li>
-                        <li className="nav-item"><a href="#">About Us</a></li>
-                        <li className="nav-item"><a href="#">Support</a></li>
+                        <li className="nav-item" style={invisibleStyle}><a href="#">...</a></li>
+                        <li className="nav-item"><a href="/aboutus">About Us</a></li>
+                        <li className="nav-item"><a href="/support">Support</a></li>
                     </ul>
                 </nav>
             </div>
