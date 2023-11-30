@@ -465,7 +465,7 @@
 .payment-page .overlap-4 {
     background-color: #faaf7c;
     border-radius: 10px;
-    height: 106px;
+    height: 126px;
     left: 60px;
     position: absolute;
     top: 419px;
@@ -504,6 +504,17 @@
     line-height: normal;
     position: absolute;
     top: 37px;
+    white-space: nowrap;
+}
+
+.payment-page .text-wrapper-23 {
+    font-size: 18px;
+    font-weight: 700;
+    left: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 60px;
     white-space: nowrap;
 }
 

@@ -11,6 +11,7 @@ const Dashboard: React.FC = () => {
 
   const handleTrack = () => {
     console.log('Tracking number: ', trackingNumber);
+    window.location.href = "/tracking";
   };
 
   return (

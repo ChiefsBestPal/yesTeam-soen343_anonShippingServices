@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Delivery.css";
+import {Link} from "react-router-dom";
 interface Address {
     line1: string;
     line2: string;
@@ -252,7 +253,10 @@ const Delivery: React.FC = () => {
                     </div>
 
 
-                    <button className='tracking-button-Y' type="submit">Track</button>
+                    {/*<button className='tracking-button-Y' type="submit">Track</button>*/}
+                    <Link to="/payment">
+                        <button type="button" className='tracking-button-Y'>Proceed with Payment</button>
+                    </Link>
                 </div>
             </div>
         </div>

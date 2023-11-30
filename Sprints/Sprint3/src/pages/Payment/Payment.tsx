@@ -3,6 +3,7 @@ import "./Payment.css";
 import line2 from './line-2.svg';
 import line3 from './line-3.svg';
 import line1 from './line-1.svg';
+import {Link} from "react-router-dom";
 
 export const Payment = (): JSX.Element => {
     const [isRadioSelected, setIsRadioSelected] = useState(true);
@@ -31,6 +32,11 @@ export const Payment = (): JSX.Element => {
         // Hide the confirmation div
         setConfirmationVisible(false);
     };
+
+    const handlePaypalCheckout = () => {
+        alert("Going to the third party payment gateway website....");
+    }
+
 
     return (
         <div className="payment-page">
@@ -107,6 +113,10 @@ export const Payment = (): JSX.Element => {
                                                         <input type="radio" name="payoption" className="ellipse" onChange={handleRequire} />
                                                     </div>
                                                     <p className="text-wrapper-22">Secure online payment through the PayPal portal</p>
+                                                    <Link to="https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png" className="text-wrapper-23">
+                                                        <button type="button" className='tracking-button-Y'
+                                                        onClick={handlePaypalCheckout}>Go to checkout</button>
+                                                    </Link>
                                                 </div>
                                         </div>
                                     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Tracking.css";
+import { Link} from 'react-router-dom';
 
 const Tracking: React.FC = () => {
     const [trackingId, setTrackingId] = useState('');
@@ -234,12 +235,16 @@ const Tracking: React.FC = () => {
                         </div>
                     </div>
                     <div className='c7-R'>
-                        Get Support
-                        <button className='tracking-button' type="submit">Submit Review</button>
+                        Need Help?
+                        <Link to="/support">
+                        <button type="button" className='tracking-button'>Contact support</button>
+                        </Link>
                     </div>
                     <div className='c7-R'>
-                        Give Review
-                        <button className='tracking-button' type="submit">Submit Review</button>
+                        Opinion?
+                        <Link to="/review">
+                            <button type="button" className='tracking-button'>Leave review</button>
+                        </Link>
                     </div>
                 </div>
             </div>
