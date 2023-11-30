@@ -1,109 +1,172 @@
-.about-us {
-    background-color: #faaf7c;
+.Review {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 90vh; /* Set the height to the full viewport height for vertical centering */
+    width: 100%; /* Full width to ensure horizontal centering */
+
+ 
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.space {
+.background-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+  
+  .background-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+  }
+  
+  .background-top {
+      top: 0;
+      height: 100%; /* Covers top half */
+      background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
+      background-size: 400% 400%;
+      -webkit-animation: gradbar 6s ease infinite;
+      -moz-animation: gradbar 6s ease infinite;
+      animation: gradbar 6s ease infinite;
+  }
+  
+  .background-bottom {
+      bottom: 0;
+      background-color: #EE7752;
+      height: 70%;
+      border-top-left-radius: 90% 30%;
+      border-top-right-radius: 40% 20%;
+  }
+
+.Rectangle {
+    width: 80%;
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.contain-3 {
+    width: 100%;
+    justify-self: center;
+}
+
+.name-anon {
+    display: flex;
+    align-items: center;
     height: 70px;
 }
 
-.about-us .div-2 {
-    /*background-color: #faaf7c;*/
-    /*height: 1080px;*/
-    /*position: relative;*/
-    /*width: 1920px;*/
+.name {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spreads out the label and the input */
+    margin-bottom: 10px; 
+    margin: 10px;
+} 
 
+.rating-review {
+    display: flex;
+    border-radius: 15px;
+    width: 40%;
+    align-items: center;
+    justify-items: stretch;
+}
+
+
+
+.input-check {
+    border-radius: 8px;
+    height: 30px;
+    margin: 10px;
+    width: 30px;
+}
+
+.input {
+    border-radius: 8px;
+    height: 30px;
+    margin: 10px;
+    width: 300px;
+}
+
+.review-title {
+    width: 200px;
+}
+
+.title {
+    display: flex;
+    width: 500px;
+    align-items: center;
+}
+
+.tracking-button {
+    padding: 10px 20px;
     background-color: #EE7752;
-    height: 1080px;
-    width: 1920px;
-    position: relative;
-    border-top-left-radius: 90% 30%;
-    border-top-right-radius: 40% 20%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+
+    background: linear-gradient(-45deg, #FF9B50, #E25E3E);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 15s ease infinite;
+    -moz-animation: gradbar 15s ease infinite;
+    animation: gradbar 15s ease infinite;
+
 }
 
-.about-us .overlap-group {
-    height: 983px;
-    left: 0;
-    position: absolute;
-    top: 96px;
-    width: 1920px;
+.tracking-button:hover {
+    transition: color 0.3s ease-out;
+    color: #EE7752;
+    border:1px solid #EE7752;
+
+    background: linear-gradient(-45deg, #F1C27B, #FFD89C, #F4DFB6);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 15s ease infinite;
+    -moz-animation: gradbar 15s ease infinite;
+    animation: gradbar 15s ease infinite;
 }
 
-.about-us .background-color {
-    height: 888px !important;
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-    width: 1920px !important;
+.buttons {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.about-us .rectangle {
-    background-color: #ffffff;
-    border-radius: 40px;
-    height: 777px;
-    left: 110px;
-    position: absolute;
-    top: 55px;
-    width: 1700px;
-}
-
-.about-us .company-logo-2 {
-    height: 128px;
-    left: 707px;
-    object-fit: cover;
-    position: absolute;
-    top: 562px;
-    width: 505px;
-}
-
-.about-us .flexcontainer {
-    align-items: flex-start;
+.contain-1 {
     display: flex;
     flex-direction: column;
-    gap: 22.46px;
-    height: 735px;
-    left: 191px;
-    position: absolute;
-    top: 75px;
-    width: 1538px;
+    width: 100%;
 }
 
-.about-us .text {
-    align-self: stretch;
-    color: #000000;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 33.7px;
-    position: relative;
-    text-align: center;
+.contain-2 {
+    width: 50%;
 }
 
-.about-us .span {
-    color: #000000;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 33.7px;
+.c1 {
+    margin-bottom: 60px;
 }
 
-.about-us .text-wrapper-7 {
-    font-size: 32px;
+.title-main {
+    color: white;
 }
 
-.about-us .footer-instance {
-    left: 0 !important;
-    position: absolute !important;
-    top: 887px !important;
-}
-
-.about-us .header-instance {
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
+.comment-box {
+    width: 100%;
+    height: 300px;
 }

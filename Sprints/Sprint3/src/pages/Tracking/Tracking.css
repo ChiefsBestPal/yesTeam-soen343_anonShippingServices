@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
 
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -47,16 +47,16 @@
 
 .Rectangle {
     width: 80%;
-    background-color: white;
+    background-color: #e3603f;
     margin: 20px;
     padding: 30px;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 0.75fr 1fr; /* Two columns of equal width */
+    grid-template-columns: 1fr 1.5fr 1fr; /* Two columns of equal width */
     grid-gap: 20px; /* Space between columns */
     margin-bottom: 20px; /* Space below the grid */
 
-
+    justify-content: center;
 
 }
 
@@ -65,11 +65,7 @@
     width: 100%;
 }
 
-.name-anon {
-    display: flex;
-    align-items: center;
-    height: 70px;
-}
+
 
 .name {
     display: flex;
@@ -79,6 +75,39 @@
     margin: 10px;
 } 
 
+.name > input {
+    flex: 1; /* This makes each element take equal space */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    width: 80%;
+}
+
+.name {
+    margin-bottom: 10px;
+    background-color: #faaf7c;
+    border-radius: 10px;
+    display: flex;
+    justify-items: space-between;
+    height: 80px;
+    padding: 10px;
+}
+
+.name-x {
+    margin-bottom: 10px;
+    background-color: #faaf7c;
+    border-radius: 10px;
+    padding: 10px;
+
+    margin-bottom: 10px; 
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
 .rating-review {
     display: flex;
     border-radius: 15px;
@@ -87,20 +116,12 @@
     justify-items: stretch;
 }
 
-
-
-.input-check {
-    border-radius: 8px;
-    height: 30px;
-    margin: 10px;
-    width: 30px;
-}
-
 .input {
     border-radius: 8px;
     height: 30px;
     margin: 10px;
-    width: 300px;
+    width: 50%;
+    justify-items: flex-end;
 }
 
 .review-title {
@@ -109,13 +130,18 @@
 
 .title {
     display: flex;
-    width: 500px;
-    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: 60%;
+    background-color: #faaf7c;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .tracking-button {
     padding: 10px 20px;
-    background-color: #EE7752;
+    background-color: #e3603f;
     color: white;
     border: none;
     cursor: pointer;
@@ -123,7 +149,7 @@
     border-radius: 4px;
     height: 50px;
 
-    background: linear-gradient(-45deg, #FF9B50, #E25E3E);
+    background: linear-gradient(-45deg, #e3603f, #E25E3E);
     background-size: 400% 400%;
     -webkit-animation: gradbar 15s ease infinite;
     -moz-animation: gradbar 15s ease infinite;
@@ -143,31 +169,109 @@
     animation: gradbar 15s ease infinite;
 }
 
-.buttons {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .contain-1 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    grid-column: 1/3;
+    background-color: #F4DFB6;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .contain-2 {
-    width: 50%;
+    width: 100%;
+    grid-column: 3;
+    background-color: #f3dfb6;
+    border-radius: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.c1 {
-    margin-bottom: 60px;
-}
+
+
 
 .title-main {
     color: white;
 }
 
-.comment-box {
-    width: 100%;
+.c1x {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.c2 {
     height: 300px;
+    background-color: #faaf7c;
+    width: 49%;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.c3 {
+    width: 50%;
+}
+
+.c3t {
+    padding-bottom: 20px;
+}
+.c3x {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+
+.ft {
+    font-size: 16px;
+}
+
+.c4 {
+    background-color: #E25E3E;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.c5 {
+    background-color: #f3dfb6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 30px;
+}
+
+.c6 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.dt {
+    font-weight: 100;
+}
+
+.c7 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }

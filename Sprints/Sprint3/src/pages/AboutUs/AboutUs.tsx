@@ -1,41 +1,131 @@
-import React from "react";
+import React, { useState, useRef } from 'react';
 import "./AboutUs.css";
-import companyLogo from './company-logo-1.png';
+import companyLogo from './Company logo.png';
 
-export const AboutUs = (): JSX.Element => {
+interface ReviewEntry {
+    name: string;
+    rating: number;
+    isAnonymous: boolean;
+    reviewTitle: string;
+    orderNumber: string;
+    review: string; // Changed to 'review' for clarity
+    answers: {
+        question1: string;
+        question2: string;
+        question3: string;
+    };
+}
+
+const AboutUs: React.FC = () => {
+    const [reviewData, setReviewData] = useState<ReviewEntry>({
+        name: '',
+        rating: 0,
+        isAnonymous: false,
+        reviewTitle: '',
+        orderNumber: '123456', // Assuming it's set already
+        review: '', // Changed to 'review'
+        answers: {
+            question1: '',
+            question2: '',
+            question3: ''
+        }
+    });
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value, type, checked } = event.target;
+        if (type === 'checkbox') {
+            setReviewData({ ...reviewData, [name]: checked });
+        } else if (name in reviewData.answers) {
+            setReviewData({
+                ...reviewData,
+                answers: { ...reviewData.answers, [name]: value }
+            });
+        } else {
+            setReviewData({ ...reviewData, [name]: value });
+        }
+    };
+
+    const handleReviewChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const { value } = event.target;
+        setReviewData({ ...reviewData, review: value });
+    };
+
+    const handleRatingChange = (newRating: number) => {
+        setReviewData({ ...reviewData, rating: newRating });
+    };
+
+    const fileInputRef = useRef<HTMLInputElement>(null);
+
+    const handleFileButtonClick = () => {
+        fileInputRef.current?.click();
+    };
+
+    const renderStars = () => {
+        let stars = [];
+        for (let i = 1; i <= 5; i++) {
+            stars.push(
+                <span key={i} onClick={() => handleRatingChange(i)} style={{ cursor: 'pointer', color: i <= reviewData.rating ? 'gold' : 'grey' }}>
+                    {i <= reviewData.rating ? '★' : '☆'}
+                </span>
+            );
+        }
+        return stars;
+    };
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        // Process form data here
+        console.log(reviewData);
+    };
+
     return (
-        <div className="about-us">
-            <div className="whole-container">
-                <div className='space'></div>
-                <div className="div-2">
-                    <div className="overlap-group">
-                        <div className="rectangle" />
-                        <img className="company-logo-2" alt="Company logo" src={companyLogo} />
-                        <div className="flexcontainer">
-                            <p className="text">
-                  <span className="span">
-                    About Us
-                    <br />
-                  </span>
-                            </p>
-                            <p className="text">
-                  <span className="span">
-                    <br />
-                  </span>
-                            </p>
-                            <p className="text">
-                  <span className="text-wrapper-7">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </span>
-                            </p>
-                        </div>
+        <div className='Review'>
+            <div className="background-top"></div>
+            <div className="background-bottom"></div>
+            <div className='title-main'>About Us</div>
+            <div className='Rectangle'>
+                <div className='contain-1'>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+
+                    <div>
+
+                    </div>
+                    <div className='contain-3'>
+                        <img src={companyLogo}></img>
                     </div>
                 </div>
             </div>
         </div>
     );
 };
+
+export default AboutUs;
