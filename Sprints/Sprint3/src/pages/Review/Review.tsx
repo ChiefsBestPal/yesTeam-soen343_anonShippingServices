@@ -108,7 +108,7 @@ const Reviews: React.FC = () => {
                         <div className='name-o'>
                             Review Title:
                         </div>
-                        <input className='input review-title-o' type="text" name="reviewTitle" value={reviewData.reviewTitle} onChange={handleInputChange} />
+                        <input className='input-o review-title-o' type="text" name="reviewTitle" value={reviewData.reviewTitle} onChange={handleInputChange} />
                     </div>
                 </div>
 

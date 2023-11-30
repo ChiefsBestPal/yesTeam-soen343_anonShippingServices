@@ -1,11 +1,10 @@
-.Review {
+.Review-Y {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 90vh; /* Set the height to the full viewport height for vertical centering */
+    height: 80vh; /* Set the height to the full viewport height for vertical centering */
     width: 100%; /* Full width to ensure horizontal centering */
 
- 
     display: flex;
     flex-direction: column;
 
@@ -13,21 +12,21 @@
     font-weight: 600;
 }
 
-.background-top {
+.background-top-Y {
     position: absolute;
     left: 0;
     right: 0;
     z-index: -2;
   }
   
-  .background-bottom {
+  .background-bottom-Y {
       position: absolute;
       left: 0;
       right: 0;
       z-index: -1;
   }
   
-  .background-top {
+  .background-top-Y {
       top: 0;
       height: 100%; /* Covers top half */
       background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
@@ -37,7 +36,7 @@
       animation: gradbar 6s ease infinite;
   }
   
-  .background-bottom {
+  .background-bottom-Y {
       bottom: 0;
       background-color: #EE7752;
       height: 70%;
@@ -45,8 +44,8 @@
       border-top-right-radius: 40% 20%;
   }
 
-.Rectangle {
-    width: 80%;
+.Rectangle-Y {
+    width: 70%;
     background-color: #e3603f;
     margin: 20px;
     padding: 30px;
@@ -63,7 +62,7 @@
 
 
 
-.name {
+.name-Y {
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Spreads out the label and the input */
@@ -71,7 +70,7 @@
     margin: 10px;
 } 
 
-.name > input {
+.name-Y > input {
     flex: 1; /* This makes each element take equal space */
     display: flex;
     justify-content: center; /* Centers content horizontally */
@@ -79,7 +78,7 @@
     width: 80%;
 }
 
-.name {
+.name-Y {
     margin-bottom: 10px;
     background-color: #faaf7c;
     border-radius: 10px;
@@ -89,7 +88,7 @@
     padding: 10px;
 }
 
-.name-x {
+.name-x-Y {
     margin-bottom: 10px;
     background-color: #faaf7c;
     border-radius: 10px;
@@ -104,13 +103,13 @@
     gap: 10px;
 }
 
-.name-z {
+.name-z-Y {
     display: flex;
     flex-direction: row;
     gap: 50px;
 }
 
-.rating-review {
+.rating-review-Y {
     display: flex;
     border-radius: 15px;
     width: 40%;
@@ -118,7 +117,7 @@
     justify-items: stretch;
 }
 
-.input {
+.input-Y {
     border-radius: 10px;
     height: 40px;
     margin: 10px;
@@ -127,11 +126,11 @@
     border: none;
 }
 
-.review-title {
+.review-title-Y {
     width: 200px;
 }
 
-.title {
+.title-Y {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -142,7 +141,7 @@
     margin-top: 10px;
 }
 
-.tracking-button {
+.tracking-button-Y {
     padding: 10px 20px;
     background-color: #e3603f;
     color: white;
@@ -160,7 +159,7 @@
 
 }
 
-.tracking-button:hover {
+.tracking-button-Y:hover {
     transition: color 0.3s ease-out;
     color: #EE7752;
     border:1px solid #EE7752;
@@ -174,7 +173,7 @@
 
 
 
-.contain-1 {
+.contain-1-Y {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -184,7 +183,7 @@
     padding: 10px;
 }
 
-.contain-2 {
+.contain-2-Y {
     width: 100%;
     grid-column: 2;
     background-color: #f3dfb6;
@@ -199,52 +198,25 @@
 
 
 
-.title-main {
+.title-main-Y {
     color: white;
 }
 
-.c1 {
+.c1-Y {
     width: 100%;
 }
 
-.c1x {
+.c1x-Y {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
 
-.c2 {
-    height: 300px;
-    background-color: #faaf7c;
-    width: 49%;
-    border-radius: 10px;
-    padding: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.c3 {
-    width: 50%;
-}
-
-.c3t {
-    padding-bottom: 20px;
-}
-.c3x {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-
-}
-
-.ft {
+.ft-Y {
     font-size: 16px;
 }
 
-.c4 {
+.c4-Y {
     background-color: #E25E3E;
     border-radius: 10px;
     color: white;
@@ -253,7 +225,7 @@
     padding: 10px;
 }
 
-.c5 {
+.c5-Y {
     background-color: #f3dfb6;
     border-radius: 10px;
     display: flex;
@@ -263,7 +235,7 @@
     padding: 30px;
 }
 
-.c6 {
+.c6-Y {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -272,11 +244,11 @@
     overflow-y: scroll;
 }
 
-.dt {
+.dt-Y {
     font-weight: 100;
 }
 
-.c7 {
+.c7-Y {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -284,44 +256,44 @@
     padding: 10px;
 }
 
-.d1 {
+.d1-Y {
     padding: 20px;
 }
 
-.d2 {
+.d2-Y {
     display: flex;
     gap: 20px;
 }
 
-.d2x {
+.d2x-Y {
     width: 50%;
 }
 
-.d3 {
+.d3-Y {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.d4 {
+.d4-Y {
     display: flex;
 }
 
-.d5 {
+.d5-Y {
     width: 50%;
 }
 
-.d6 {
-    height: 200px;
+.d6-Y {
+    height: 10vh;
     justify-content: flex-start;
     align-items: start;
     padding: 20px;
 }
 
-.d7 {
+.d7-Y {
     background-color: #E25E3E;
 }
 
-.input {
+.input-Y {
  padding: 10px;;
 }
