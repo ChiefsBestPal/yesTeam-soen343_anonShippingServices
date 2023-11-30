@@ -1,27 +1,87 @@
 import React, { useState, useRef } from 'react';
 import "./Review.css";
-
+interface ReviewProps {
+    review: ReviewEntry;
+}
 interface ReviewEntry {
-    name: string;
-    rating: number;
-    isAnonymous: boolean;
-    reviewTitle: string;
-    orderNumber: string;
-    review: string; // Changed to 'review' for clarity
-    answers: {
-        question1: string;
-        question2: string;
-        question3: string;
-    };
+    // reviewObj : {
+        name: string;
+        rating: number;
+        isAnonymous: boolean;
+        reviewTitle: string;
+        orderNumber: string;
+        review: string; // Changed to 'review' for clarity
+        answers: {
+            question1: string;
+            question2: string;
+            question3: string;
+        };
+    // }
+}
+interface ReviewsListProps {
+    reviews: Array<ReviewEntry>;
+}
+// new
+const Review: React.FC<ReviewProps> = ({ review }) => {
+    const { name, rating, isAnonymous, reviewTitle, orderNumber, review: reviewText, answers } = review;
+
+    return (
+
+        <div className="review">
+            <pre>{"\n"}</pre>
+            <div className="review-header">
+                <h3 style={{textDecoration : 'underline'}}> {isAnonymous ? 'Anonymous' : name}</h3>
+                <span>Order #{orderNumber}</span>
+                <div className="rating">{`Rating: ${rating}/5 stars`}</div>
+            </div>
+            <h4>{reviewTitle}</h4>
+            <p>{reviewText}</p>
+            <div className="answers-section">
+                <span>Answer 1: {answers.question1} {" || \t"}</span>
+                <span>Answer 2: {answers.question2} {" || \t"}</span>
+                <span>Answer 3: {answers.question3} {"\t"}</span>
+            </div>
+        </div>
+    );
+};
+interface ReviewsListProps {
+    reviews: ReviewEntry[];
 }
 
+const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
+    return (
+        <div className="reviews-list">
+            <h2>Customer Reviews</h2>
+            {reviews.map((review, index) => (
+                <Review key={index} review={review} />
+            ))}
+        </div>
+    );
+};
 const Reviews: React.FC = () => {
+    const [reviews, setReviews] = useState<ReviewEntry[]>([
+        {
+            name: 'John Doe',
+            rating: 4,
+            isAnonymous: false,
+            reviewTitle: 'Great Product!',
+            orderNumber: '123456',
+            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            answers: {
+                question1: 'Yes',
+                question2: 'No',
+                question3: 'Maybe',
+            },
+        },
+        // Add more reviews as needed
+    ]);
+
     const [reviewData, setReviewData] = useState<ReviewEntry>({
         name: '',
         rating: 0,
         isAnonymous: false,
         reviewTitle: '',
-        orderNumber: '123456', // Assuming it's set already
+        orderNumber: '', // Assuming it's set already
         review: '', // Changed to 'review'
         answers: {
             question1: '',
@@ -71,10 +131,11 @@ const Reviews: React.FC = () => {
         return stars;
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const handleSubmit = () => { //event: React.FormEvent<HTMLFormElement>
+        //event.preventDefault();
         // Process form data here
         console.log(reviewData);
+        setReviews([...reviews, reviewData]);
     };
 
     return (
@@ -163,10 +224,11 @@ const Reviews: React.FC = () => {
                     ref={fileInputRef} 
                     style={{ display: 'none' }} 
                 />
-                <button className='tracking-button-o' type="submit">Submit Review</button>
+                <button className='tracking-button-o' type="button" onClick={handleSubmit}>Submit Review</button>
 
                 
             </div>
+            <ReviewsList reviews={reviews} />
         </div>
     );
 };
