@@ -1,81 +1,23 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import "./Tracking.css";
 
-interface ReviewEntry {
-    name: string;
-    rating: number;
-    isAnonymous: boolean;
-    reviewTitle: string;
-    orderNumber: string;
-    review: string; // Changed to 'review' for clarity
-    answers: {
-        question1: string;
-        question2: string;
-        question3: string;
-    };
-}
-
 const Tracking: React.FC = () => {
-    const [reviewData, setReviewData] = useState<ReviewEntry>({
-        name: '',
-        rating: 0,
-        isAnonymous: false,
-        reviewTitle: '',
-        orderNumber: '123456', // Assuming it's set already
-        review: '', // Changed to 'review'
-        answers: {
-            question1: '',
-            question2: '',
-            question3: ''
+    const [trackingId, setTrackingId] = useState('');
+    const [isValidId, setIsValidId] = useState(true);
+
+    const validateTrackingId = (id: string) => {
+        if (id == '1234567890'){
+            return id.length === 10; // Adjust this condition based on your requirements
         }
-    });
+        return false;
+    };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value, type, checked } = event.target;
-        if (type === 'checkbox') {
-            setReviewData({ ...reviewData, [name]: checked });
-        } else if (name in reviewData.answers) {
-            setReviewData({
-                ...reviewData,
-                answers: { ...reviewData.answers, [name]: value }
-            });
-        } else {
-            setReviewData({ ...reviewData, [name]: value });
-        }
+        const id = event.target.value;
+        setTrackingId(id);
+        setIsValidId(validateTrackingId(id));
     };
 
-    const handleReviewChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        const { value } = event.target;
-        setReviewData({ ...reviewData, review: value });
-    };
-
-    const handleRatingChange = (newRating: number) => {
-        setReviewData({ ...reviewData, rating: newRating });
-    };
-
-    const fileInputRef = useRef<HTMLInputElement>(null);
-
-    const handleFileButtonClick = () => {
-        fileInputRef.current?.click();
-    };
-
-    const renderStars = () => {
-        let stars = [];
-        for (let i = 1; i <= 5; i++) {
-            stars.push(
-                <span key={i} onClick={() => handleRatingChange(i)} style={{ cursor: 'pointer', color: i <= reviewData.rating ? 'gold' : 'grey' }}>
-                    {i <= reviewData.rating ? '★' : '☆'}
-                </span>
-            );
-        }
-        return stars;
-    };
-
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        // Process form data here
-        console.log(reviewData);
-    };
 
     return (
         <div className='Review'>
@@ -87,7 +29,7 @@ const Tracking: React.FC = () => {
                     <div className='c1'>
                         <div className='name'>
                             <div className='txt'>Tracking ID</div>
-                            <input className='input' type="text" name="name" value={reviewData.name} onChange={handleInputChange} placeholder='1234567890' />
+                            <input className='input' type="text" name="name" value={trackingId} onChange={handleInputChange} placeholder='1234567890' />
                             <button className='tracking-button' type="submit">Track</button>
                         </div>
                     </div>
@@ -98,29 +40,38 @@ const Tracking: React.FC = () => {
                                 <div className='c3t'>
                                     Shipment Status
                                 </div>
-                                <div className='c3t ft'>
-                                    In Transit
-                                </div>
+                                {isValidId && (
+                                    <div className='c3t ft'>
+                                        In Transit
+                                    </div>
+                                )}
                             </div>
                             <div className='c3x'>
                                 <div className='c3'>
                                     <div className='c3t'>
                                         Scheduled Delivery
                                     </div>
-                                    <div className='c3t ft'>
-                                        Monday
-                                    </div>
-                                    <div className='c3t ft'>
-                                        01 / 21 / 2023
-                                    </div>
+                                    {isValidId && (
+                                        <div className='c3t ft'>
+                                            Monday
+                                        </div>
+                                    )}
+
+                                    {isValidId && (
+                                        <div className='c3t ft'>
+                                            01 / 21 / 2023
+                                        </div>
+                                    )}
                                 </div>
                                 <div className='c3'>
                                     <div className='c3t'>
                                         Estimated time
                                     </div>
-                                    <div className='c3t ft'>
-                                        By End of the Day
-                                    </div>
+                                    {isValidId && (
+                                        <div className='c3t ft'>
+                                            By End of the Day
+                                        </div>
+                                    )}
                                 </div>
                             </div>  
                         </div>
@@ -130,16 +81,16 @@ const Tracking: React.FC = () => {
                                         Scheduled Delivery
                                     </div>
                                     <div className='c3t ft'>
-                                        Tracking ID : 1234567890
+                                        Tracking ID : {isValidId && ('1234567890')}
                                     </div>
                                     <div className='c3t ft'>
-                                        Ship to : Montreal, QC, Canada 
+                                        Ship to : {isValidId && ('Montreal, QC, Canada')}
                                     </div>
                                     <div className='c3t ft'>
-                                        Service Type : Expedited - Custom
+                                        Service Type : {isValidId && ('Expedited - Custom')}
                                     </div>
                                     <div className='c3t ft'>
-                                        Weight : 5 lbs
+                                        Weight : {isValidId && ('5 lbs')}
                                     </div>
                                 </div>
                         </div>
@@ -159,6 +110,7 @@ const Tracking: React.FC = () => {
                                     Location
                                 </div>
                             </div>
+                            {isValidId && (
                             <div className='c6'>
                                 <div className='c5'>
                                     <div className='ft'>
@@ -250,7 +202,7 @@ const Tracking: React.FC = () => {
                                         <div>Canada</div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>)}
                         </div>
                     </div>
 
@@ -290,8 +242,6 @@ const Tracking: React.FC = () => {
                         <button className='tracking-button' type="submit">Submit Review</button>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     );

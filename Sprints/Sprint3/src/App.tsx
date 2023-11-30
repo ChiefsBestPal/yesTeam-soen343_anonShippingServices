@@ -10,13 +10,13 @@ import Review from './pages/Review/Review';
 import AboutUs from './pages/AboutUs/AboutUs';
 import { Payment } from './pages/Payment/Payment';
 import Tracking from './pages/Tracking/Tracking';
-
+import Delivery from './pages/Delivery/Delivery';
 
 function App() {
   return (
     <div className='app' style={{ height: '100%' }}>
       <Header></Header>
-      <Tracking></Tracking>
+      <Delivery></Delivery>
       <Footer></Footer>
     </div>
   );
