@@ -1,4 +1,4 @@
-.Review {
+.Review-R {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -13,21 +13,21 @@
     font-weight: 600;
 }
 
-.background-top {
+.background-top-R {
     position: absolute;
     left: 0;
     right: 0;
     z-index: -2;
   }
   
-  .background-bottom {
+  .background-bottom-R {
       position: absolute;
       left: 0;
       right: 0;
       z-index: -1;
   }
   
-  .background-top {
+  .background-top-R {
       top: 0;
       height: 100%; /* Covers top half */
       background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
@@ -37,7 +37,7 @@
       animation: gradbar 6s ease infinite;
   }
   
-  .background-bottom {
+  .background-bottom-R {
       bottom: 0;
       background-color: #EE7752;
       height: 70%;
@@ -45,7 +45,7 @@
       border-top-right-radius: 40% 20%;
   }
 
-.Rectangle {
+.Rectangle-R {
     width: 80%;
     background-color: #e3603f;
     margin: 20px;
@@ -60,14 +60,14 @@
 
 }
 
-.contain-3 {
+.contain-3-R {
     grid-column: 1 / -1;
     width: 100%;
 }
 
 
 
-.name {
+.name-R {
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Spreads out the label and the input */
@@ -75,7 +75,7 @@
     margin: 10px;
 } 
 
-.name > input {
+.name-R > input {
     flex: 1; /* This makes each element take equal space */
     display: flex;
     justify-content: center; /* Centers content horizontally */
@@ -83,7 +83,7 @@
     width: 80%;
 }
 
-.name {
+.name-R {
     margin-bottom: 10px;
     background-color: #faaf7c;
     border-radius: 10px;
@@ -93,7 +93,7 @@
     padding: 10px;
 }
 
-.name-x {
+.name-x-R {
     margin-bottom: 10px;
     background-color: #faaf7c;
     border-radius: 10px;
@@ -108,7 +108,7 @@
     gap: 10px;
 }
 
-.rating-review {
+.rating-review-R {
     display: flex;
     border-radius: 15px;
     width: 40%;
@@ -116,7 +116,7 @@
     justify-items: stretch;
 }
 
-.input {
+.input-R {
     border-radius: 8px;
     height: 30px;
     margin: 10px;
@@ -124,11 +124,11 @@
     justify-items: flex-end;
 }
 
-.review-title {
+.review-title-R {
     width: 200px;
 }
 
-.title {
+.title-R {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -139,7 +139,7 @@
     margin-top: 10px;
 }
 
-.tracking-button {
+.tracking-button-R {
     padding: 10px 20px;
     background-color: #e3603f;
     color: white;
@@ -157,7 +157,7 @@
 
 }
 
-.tracking-button:hover {
+.tracking-button-R:hover {
     transition: color 0.3s ease-out;
     color: #EE7752;
     border:1px solid #EE7752;
@@ -171,7 +171,7 @@
 
 
 
-.contain-1 {
+.contain-1-R {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -181,7 +181,7 @@
     padding: 10px;
 }
 
-.contain-2 {
+.contain-2-R {
     width: 100%;
     grid-column: 3;
     background-color: #f3dfb6;
@@ -195,17 +195,17 @@
 
 
 
-.title-main {
+.title-main-R {
     color: white;
 }
 
-.c1x {
+.c1x-R {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
 
-.c2 {
+.c2-R {
     height: 300px;
     background-color: #faaf7c;
     width: 49%;
@@ -218,25 +218,25 @@
 
 }
 
-.c3 {
+.c3-R {
     width: 50%;
 }
 
-.c3t {
+.c3t-R {
     padding-bottom: 20px;
 }
-.c3x {
+.c3x-R {
     display: flex;
     justify-content: flex-start;
     width: 100%;
 
 }
 
-.ft {
+.ft-R {
     font-size: 16px;
 }
 
-.c4 {
+.c4-R {
     background-color: #E25E3E;
     border-radius: 10px;
     color: white;
@@ -245,7 +245,7 @@
     padding: 10px;
 }
 
-.c5 {
+.c5-R {
     background-color: #f3dfb6;
     border-radius: 10px;
     display: flex;
@@ -255,7 +255,7 @@
     padding: 30px;
 }
 
-.c6 {
+.c6-R {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -264,11 +264,11 @@
     overflow-y: scroll;
 }
 
-.dt {
+.dt-R {
     font-weight: 100;
 }
 
-.c7 {
+.c7-R {
     display: flex;
     gap: 20px;
     justify-content: center;
