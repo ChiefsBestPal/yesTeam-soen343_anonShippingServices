@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 90vh; /* Set the height to the full viewport height for vertical centering */
     width: 100%; /* Full width to ensure horizontal centering */
 
  
@@ -11,6 +10,8 @@
 
     font-size: 20px;
     font-weight: 600;
+    margin-top: 50px; /*ADDED*/
+    margin-bottom: 50px;
 }
 
 .background-top-o {

@@ -80,7 +80,7 @@ const Delivery: React.FC = () => {
 
 
     return (
-        <div className='Review'>
+        <div className='Review-Y'>
             <div className="background-top-Y"></div>
             <div className="background-bottom-Y"></div>
             <div className='title-main-Y'>Delivery Request</div>

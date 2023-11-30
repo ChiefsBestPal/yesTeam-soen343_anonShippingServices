@@ -1,8 +1,7 @@
-.Review {
+.Review-T {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 90vh; /* Set the height to the full viewport height for vertical centering */
     width: 100%; /* Full width to ensure horizontal centering */
 
  
@@ -11,23 +10,25 @@
 
     font-size: 20px;
     font-weight: 600;
+    margin-top: 50px; /*ADDED*/
+    margin-bottom: 50px;
 }
 
-.background-top {
+.background-top-T {
     position: absolute;
     left: 0;
     right: 0;
     z-index: -2;
   }
   
-  .background-bottom {
+  .background-bottom-T {
       position: absolute;
       left: 0;
       right: 0;
       z-index: -1;
   }
   
-  .background-top {
+  .background-top-T {
       top: 0;
       height: 100%; /* Covers top half */
       background: linear-gradient(-45deg, #FFDCA9, #FAAB78, #df965a);
@@ -37,7 +38,7 @@
       animation: gradbar 6s ease infinite;
   }
   
-  .background-bottom {
+  .background-bottom-T {
       bottom: 0;
       background-color: #EE7752;
       height: 70%;
@@ -45,7 +46,7 @@
       border-top-right-radius: 40% 20%;
   }
 
-.Rectangle {
+.Rectangle-T {
     width: 80%;
     background-color: white;
     margin: 20px;
@@ -59,18 +60,18 @@
 
 }
 
-.contain-3 {
+.contain-3-T {
     width: 100%;
     justify-self: center;
 }
 
-.name-anon {
+.name-anon-T {
     display: flex;
     align-items: center;
     height: 70px;
 }
 
-.name {
+.name-T {
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Spreads out the label and the input */
@@ -78,7 +79,7 @@
     margin: 10px;
 } 
 
-.rating-review {
+.rating-review-T {
     display: flex;
     border-radius: 15px;
     width: 40%;
@@ -88,31 +89,31 @@
 
 
 
-.input-check {
+.input-check-T {
     border-radius: 8px;
     height: 30px;
     margin: 10px;
     width: 30px;
 }
 
-.input {
+.input-T {
     border-radius: 8px;
     height: 30px;
     margin: 10px;
     width: 300px;
 }
 
-.review-title {
+.review-title-T {
     width: 200px;
 }
 
-.title {
+.title-T {
     display: flex;
     width: 500px;
     align-items: center;
 }
 
-.tracking-button {
+.tracking-button-T {
     padding: 10px 20px;
     background-color: #EE7752;
     color: white;
@@ -130,7 +131,7 @@
 
 }
 
-.tracking-button:hover {
+.tracking-button:hover-T {
     transition: color 0.3s ease-out;
     color: #EE7752;
     border:1px solid #EE7752;
@@ -142,31 +143,31 @@
     animation: gradbar 15s ease infinite;
 }
 
-.buttons {
+.buttons-T {
     width: 80%;
     display: flex;
     justify-content: space-between;
 }
 
-.contain-1 {
+.contain-1-T {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.contain-2 {
+.contain-2-T {
     width: 50%;
 }
 
-.c1 {
+.c1-T {
     margin-bottom: 60px;
 }
 
-.title-main {
+.title-main-T {
     color: white;
 }
 
-.comment-box {
+.comment-box-T {
     width: 100%;
     height: 300px;
 }

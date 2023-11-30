@@ -19,8 +19,8 @@ function App() {
     <div className='app' style={{ height: '100%' }}>
         <BrowserRouter>
             <Header></Header>
-            <Routes>
-
+            <main style={{flexGrow: 1}}>
+              <Routes>
                 <Route path='/'  element={<Dashboard />} />
                 <Route path='/aboutus'  element={<AboutUs />} />
                 <Route path='/quote'  element={<Quote />} />
@@ -29,7 +29,9 @@ function App() {
                 <Route path='/support'  element={<Support />} />
                 <Route path='/payment'  element={<Payment />} />
                 <Route path='/review'  element={<Review />} />
-            </Routes>
+              </Routes>
+            </main>
+
             <Footer></Footer>
         </BrowserRouter>
     </div>
