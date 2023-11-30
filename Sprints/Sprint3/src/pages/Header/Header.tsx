@@ -7,7 +7,6 @@ import companyLogo from './Company logo.png';
 const Header: React.FC = () => {
   return (
     <header className='Header'>
-      <div className="grad-bar"></div>
       <div className="nav-wrapper">
         <nav className="navbar">
           <a className='nav-item' href="/"><img src={companyLogo} alt="Company Logo" /></a>
@@ -25,6 +24,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
       </div>
+      <div className="grad-bar"></div>
     </header>
   );
 };

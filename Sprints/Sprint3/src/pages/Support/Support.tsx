@@ -1,7 +1,7 @@
 
 
 
-import React, { useState } from "react";
+import React, { useState,useRef,useEffect } from "react";
 import "./Support.css";
 
 interface ChatEntry {
@@ -13,17 +13,26 @@ interface ChatEntry {
     const [inputValue, setInputValue] = useState("");
     const [chatHistory, setChatHistory] = useState<ChatEntry[]>([]);
     const [responseIndex, setResponseIndex] = useState(0);
-  
+
+    const messagesContainerRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+      // Scroll to the bottom when messages change
+      if (messagesContainerRef.current) {
+        messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+      }
+    }, [chatHistory]);
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setInputValue(e.target.value);
     };
   
     const generateBotResponse = () => {
       const responses = [
-        "Cuz he is a faggoot",
-        "There is something about the dick he just loves",
+        "Cuz he has a clapped hairline",
+        "There is something about the diagrams he just loves",
         "More than what you can count on your fingers",
-        "Ok how You double it and give to the next person."
+        "Ok now You double it and give to the next person."
       ];
   
       const response = responses[responseIndex % responses.length];
@@ -38,6 +47,8 @@ interface ChatEntry {
     };
   
     const renderChatHistory = () => {
+
+
       return chatHistory.map((entry, index) => (
         <div className="chat" key={index}>
           <div className="user-message">{entry.user}</div>
@@ -90,7 +101,7 @@ interface ChatEntry {
           More questions? Message the AI-powered revolutionary UPYes help bot for more help!
         </div>
       <div className="AI">
-        <div className="chat-history">
+        <div className="chat-history" ref={messagesContainerRef}>
           {renderChatHistory()}
         </div>
         <input 

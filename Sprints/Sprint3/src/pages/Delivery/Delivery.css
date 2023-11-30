@@ -55,8 +55,8 @@
     display: grid;
     grid-template-columns: 1.5fr 1.5fr; /* Two columns of equal width */
     grid-gap: 20px; /* Space between columns */
-    margin-bottom: 20px; /* Space below the grid */
-
+    /*margin-bottom: 5%; !* Space below the grid *!*/
+    /*margin-top: 3%; !* Space below the grid *!*/
     justify-content: center;
 
 }

@@ -71,9 +71,16 @@
 }
 
 .Question {
-    font-weight: bold; /* Make question text bold */
+    font-weight: 900; /* Make question text bold */
+    text-underline: #C63D2F;
+    text-decoration: underline;
     font-size: 20px;
     margin-top: 10px; /* Spacing above the question */
+}
+.Question+div{
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: oblique;
 }
 
 .AI-intro {
@@ -106,7 +113,7 @@
   
   .chat-history {
     overflow-y: auto;
-    max-height: 600px; /* Adjust based on your design */
+    max-height: 300px; /* Adjust based on your design */
     margin-bottom: 10px;
   }
 

@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         visibility: 'hidden',
     };
     return (
-        <header className='Header'>
+        <footer className='Header'>
             <div className="grad-bar"></div>
             <div className="nav-wrapper">
                 <nav className="navbar">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                     </ul>
                 </nav>
             </div>
-        </header>
+        </footer>
     );
 };
 

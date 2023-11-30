@@ -15,8 +15,8 @@ import Delivery from './pages/Delivery/Delivery';
 
 function App() {
   return (
-
-    <div className='app' style={{ height: '100%' }}>
+      //style={{ height: '100%' }}>
+    <div className='app' >
         <BrowserRouter>
             <Header></Header>
             <main style={{flexGrow: 1}}>
