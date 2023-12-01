@@ -51,6 +51,25 @@ export const Payment = (): JSX.Element => {
         return mm + '/' + dd + '/' + yyyy;
     }
 
+    const generateTotal = () => {
+        const randomSubtotal = parseFloat((Math.random() * 100).toFixed(2)); // Generates a random subtotal up to $100
+        const calculatedTaxes = parseFloat((randomSubtotal * 0.14975).toFixed(2)); // Calculates taxes
+        const calculatedTotal = parseFloat((randomSubtotal + calculatedTaxes).toFixed(2)); // Calculates total
+
+        // Update state
+        setSubtotal(randomSubtotal);
+        setTaxes(calculatedTaxes);
+        setTotal(calculatedTotal);
+    };
+
+    React.useEffect(() => {
+        generateTotal();
+    }, []);
+
+    const [subtotal, setSubtotal] = useState(0);
+    const [taxes, setTaxes] = useState(0);
+    const [total, setTotal] = useState(0);
+
     return (
         <div className="payment-page">
             <div className="whole-container">
@@ -65,7 +84,7 @@ export const Payment = (): JSX.Element => {
                         <form onSubmit={handleSubmit}>
                                     <div className="summary-section">
                                         <div className="overlap-2">
-                                            <div className="text-wrapper-8">Total: $ 57.51</div>
+                                            <div className="text-wrapper-8">Total: $ {total.toFixed(2)}</div>
                                             <div className="transaction-date">
                                                 {"Transaction Date "  + datetimeNow()}
 
@@ -74,10 +93,10 @@ export const Payment = (): JSX.Element => {
                                             </div>
                                             <div className="text-wrapper-9">Summary</div>
                                             <div className="subtotal-taxes">
-                                                Subtotal : $ 50.01
+                                                Subtotal : $ {subtotal.toFixed(2)}
 
                                                 <br />
-                                                Taxes : $ 7.50
+                                                Taxes : $ {taxes.toFixed(2)}
                                             </div>
                                             <button type="submit" className="overlap-group-2">
                                                 <div className="rectangle" />
