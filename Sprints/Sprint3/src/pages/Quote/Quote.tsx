@@ -34,7 +34,9 @@ export const Quote: React.FC<QuoteProps> = () => {
         <div className="quote">
             <div className="whole-container">
                 <div className='space'></div>
+
                 <div className="div-2">
+                    <h2 className='title-main-X' style={{textAlign: "center",fontSize: "4em", color: "white"}}>Quotation Calculator</h2>
                     <div className="overlap">
                         <form className="package-info" onSubmit={handleSubmit}>
                             <div className="addresses">
@@ -123,7 +125,7 @@ export const Quote: React.FC<QuoteProps> = () => {
                             </div>
                             <div className="submit-button">
                                     <button type="submit" className="overlap-2 text-wrapper-15">
-                                        GET QUOTES
+                                        Estimate this quote
                                     </button>
                             </div>
                             <div className="special-requests">

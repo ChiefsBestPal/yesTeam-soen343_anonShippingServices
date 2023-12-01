@@ -32,11 +32,24 @@ export const Payment = (): JSX.Element => {
         // Hide the confirmation div
         setConfirmationVisible(false);
     };
-
+    const delay = (ms : number) => new Promise(
+        resolve => setTimeout(resolve, ms)
+    );
     const handlePaypalCheckout = () => {
         alert("Going to the third party payment gateway website....");
-    }
+        window.location.href = "https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png";
+        delay(2500).then(r => true);
+        window.location.href = "http://localhost:3000/payment"
 
+    }
+    const datetimeNow = () => {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        return mm + '/' + dd + '/' + yyyy;
+    }
 
     return (
         <div className="payment-page">
@@ -54,13 +67,15 @@ export const Payment = (): JSX.Element => {
                                         <div className="overlap-2">
                                             <div className="text-wrapper-8">Total</div>
                                             <div className="transaction-date">
-                                                Transaction Date
-                                                <br />
-                                                Time
+                                                {"Transaction Date "  + datetimeNow()}
+
+                                                {/*<br />*/}
+                                                {/*Time: NOW*/}
                                             </div>
                                             <div className="text-wrapper-9">Summary</div>
                                             <div className="subtotal-taxes">
                                                 Subtotal
+
                                                 <br />
                                                 Taxes
                                             </div>
@@ -113,10 +128,10 @@ export const Payment = (): JSX.Element => {
                                                         <input type="radio" name="payoption" className="ellipse" onChange={handleRequire} />
                                                     </div>
                                                     <p className="text-wrapper-22">Secure online payment through the PayPal portal</p>
-                                                    <Link to="https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png" className="text-wrapper-23">
+                                                    <div className="text-wrapper-23">
                                                         <button type="button" className='tracking-button-Y'
                                                         onClick={handlePaypalCheckout}>Go to checkout</button>
-                                                    </Link>
+                                                    </div>
                                                 </div>
                                         </div>
                                     </div>
