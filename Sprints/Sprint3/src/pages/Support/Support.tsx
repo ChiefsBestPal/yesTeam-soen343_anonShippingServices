@@ -10,11 +10,27 @@ interface ChatEntry {
   }
   
   const Support: React.FC = () => {
+
+
     const [inputValue, setInputValue] = useState("");
     const [chatHistory, setChatHistory] = useState<ChatEntry[]>([]);
     const [responseIndex, setResponseIndex] = useState(0);
 
     const messagesContainerRef = useRef<HTMLDivElement | null>(null);
+
+    const [orderNumber, setOrderNumber] = useState('');
+    const [problemDescription, setProblemDescription] = useState('');
+
+    const handleSubmit = () => {
+      let ticketNum = "" + Math.floor(Math.random() * 99999);
+      alert("Submitted ticket #" + ticketNum);
+
+      setOrderNumber('');
+      setProblemDescription('');
+
+
+
+    };
 
     useEffect(() => {
       // Scroll to the bottom when messages change
@@ -98,6 +114,7 @@ interface ChatEntry {
         </div>
       </div>
       <div className="AI-intro">
+          Try to reach an employee here; No one Answering ? <br/>
           More questions? Message the AI-powered revolutionary UPYes help bot for more help!
         </div>
       <div className="AI">
@@ -116,6 +133,35 @@ interface ChatEntry {
           }}
         />
       </div>
+      <div>
+        <h1>Submit a Problem Ticket</h1>
+        <form>
+          <div style={{margin : "0", textAlign: "center"}}>
+            <label htmlFor="orderNumber">Order Number: </label>
+            <input
+                type="text"
+                id="orderNumber"
+                value={orderNumber}
+                onChange={(e) => setOrderNumber(e.target.value)}
+            />
+          </div>
+          <br/>
+          <div style={{margin : "0", textAlign: "center"}}>
+            <label htmlFor="problemDescription">Problem Description: </label>
+            <textarea
+                id="problemDescription"
+                value={problemDescription}
+                onChange={(e) => setProblemDescription(e.target.value)}
+            />
+          </div>
+
+          <button type="button" onClick={handleSubmit} style={{marginLeft: "40%"}}>
+            Submit Ticket
+          </button>
+        </form>
+        <br/>
+      </div>
+
     </div>
   );
 };
