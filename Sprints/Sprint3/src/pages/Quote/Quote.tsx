@@ -148,12 +148,35 @@ export const Quote: React.FC<QuoteProps> = () => {
                             <div className="quote-options">
                                 <div className="overlap-group-wrapper">
                                     <div className="overlap-group-3">
-                                        <div className="text-wrapper-17">Option 1 ...</div>
+                                        <div className="text-wrapper-17">Option 1 ...
+                                            <br/>
+                                            <br/>
+
+                                        <p><b>Time Option:</b> Standard</p>
+                                            <br/>
+                                        <p><b>Delivery Time:</b> 3-5 business days</p><br/>
+                                        <p><b>Extra requests accepted:</b> Heat safety & Large package safety</p><br/>
+                                        <p><b>Fee:</b> 19.99 </p>
+
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div className="overlap-wrapper">
                                     <div className="overlap-group-3">
-                                        <div className="text-wrapper-17">Option 2 ...</div>
+                                        <div className="text-wrapper-17">Option 2 ...
+
+                                            <br/>
+                                            <br/>
+
+                                            <p><b>Time Option:</b> Express, Minimal</p>
+                                            <br/>
+                                            <p><b>Delivery Time:</b> 1-2 business days</p>
+                                            <br/>
+                                            <p><b>Extra requests accepted:</b> None </p>
+                                            <br/>
+                                            <p><b>Fee:</b> 14.99 </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

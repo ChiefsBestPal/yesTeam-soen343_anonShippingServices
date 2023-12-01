@@ -134,8 +134,10 @@ const Reviews: React.FC = () => {
     const handleSubmit = () => { //event: React.FormEvent<HTMLFormElement>
         //event.preventDefault();
         // Process form data here
-        console.log(reviewData);
-        setReviews([...reviews, reviewData]);
+        let shallowReviewData = Object.assign({}, reviewData);
+        shallowReviewData.orderNumber = "" + Math.floor(Math.random() * 999999);
+        console.log(shallowReviewData);
+        setReviews([...reviews, shallowReviewData]);
     };
 
     return (

@@ -1,11 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Payment.css";
 import line2 from './line-2.svg';
 import line3 from './line-3.svg';
 import line1 from './line-1.svg';
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
 
 export const Payment = (): JSX.Element => {
+    const navigate  = useNavigate();
+    const [initialPath, setInitialPath] = useState<string | null>(null);
+
     const [isRadioSelected, setIsRadioSelected] = useState(true);
     const [isConfirmationVisible, setConfirmationVisible] = useState(false);
     const handleRequire = () => {
@@ -15,6 +18,7 @@ export const Payment = (): JSX.Element => {
             setIsRadioSelected(radioElement.checked);
         }
     };
+
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         // Display the confirmation div
@@ -37,9 +41,20 @@ export const Payment = (): JSX.Element => {
     );
     const handlePaypalCheckout = () => {
         alert("Going to the third party payment gateway website....");
-        window.location.href = "https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png";
-        delay(2500).then(r => true);
-        window.location.href = "http://localhost:3000/payment"
+        // window.location.href = "https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png";
+        // delay(2500).then(r => true);
+        // window.location.href = "http://localhost:3000/payment"
+        // let _initialPath = window.location.pathname
+        // //setInitialPath();
+        //
+        // navigate('https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png');
+        //
+        // setTimeout(() => {
+        //     if (_initialPath) {
+        //         navigate(_initialPath);
+        //     }
+        // }, 2000);
+        window.location.href = 'https://ecrlib.org/wp-content/uploads/2023/03/Paypal-Popup-Window-for-Fine-Payment.png';
 
     }
     const datetimeNow = () => {
