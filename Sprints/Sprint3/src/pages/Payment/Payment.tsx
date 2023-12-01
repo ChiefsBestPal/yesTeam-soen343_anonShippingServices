@@ -65,7 +65,7 @@ export const Payment = (): JSX.Element => {
                         <form onSubmit={handleSubmit}>
                                     <div className="summary-section">
                                         <div className="overlap-2">
-                                            <div className="text-wrapper-8">Total: $ 57.50</div>
+                                            <div className="text-wrapper-8">Total: $ 57.51</div>
                                             <div className="transaction-date">
                                                 {"Transaction Date "  + datetimeNow()}
 
@@ -74,7 +74,7 @@ export const Payment = (): JSX.Element => {
                                             </div>
                                             <div className="text-wrapper-9">Summary</div>
                                             <div className="subtotal-taxes">
-                                                Subtotal : $ 50
+                                                Subtotal : $ 50.01
 
                                                 <br />
                                                 Taxes : $ 7.50
