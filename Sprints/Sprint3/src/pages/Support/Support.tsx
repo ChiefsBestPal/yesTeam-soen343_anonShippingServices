@@ -29,10 +29,10 @@ interface ChatEntry {
   
     const generateBotResponse = () => {
       const responses = [
-        "Cuz he has a clapped hairline",
-        "There is something about the diagrams he just loves",
-        "More than what you can count on your fingers",
-        "Ok now You double it and give to the next person."
+        "It eeeez what it eeeez.",
+        "IDK, double it and give to the next person.",
+        "More than what you can count on your fingers.",
+        "Taylor Swift."
       ];
   
       const response = responses[responseIndex % responses.length];
