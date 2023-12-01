@@ -90,12 +90,12 @@
     font-family: "Roboto-Bold", Helvetica;
     font-size: 16px;
     font-weight: 700;
-    left: 286px;
+    left: 30px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
     top: 406px;
-    width: 46px;
+    width: 100%;
 }
 
 .payment-page .transaction-date {
