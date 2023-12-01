@@ -74,10 +74,10 @@ export const Payment = (): JSX.Element => {
                                             </div>
                                             <div className="text-wrapper-9">Summary</div>
                                             <div className="subtotal-taxes">
-                                                Subtotal
+                                                Subtotal : $50
 
                                                 <br />
-                                                Taxes
+                                                Taxes : $7.50
                                             </div>
                                             <button type="submit" className="overlap-group-2">
                                                 <div className="rectangle" />
